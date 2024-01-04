@@ -1,6 +1,6 @@
 //Classificador de nível do Herói//
 let nomeDoHeroi = "Jin Sakai"
-let xpDoHeroi = 7800
+let xpDoHeroi = 11000
 
 if (xpDoHeroi < 1000) {
     console.log("O herói de nome " + nomeDoHeroi + " está no nível ferro!");
