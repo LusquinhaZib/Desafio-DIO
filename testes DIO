@@ -1,0 +1,14 @@
+let num1 = 15;
+let num2 = 20;
+const xpGanho = 100;
+
+//TODO: Implemente a lógica para exibir o xpGanho:
+
+function calculoVariaveisUmDois(num1, num2, xpGanho){
+  return num1 * num2 + xpGanho
+}
+
+let xpFinal = calculoVariaveisUmDois(num1, num2, xpGanho)
+
+// Imprime a quantidade de XP ganho
+console.log("Voce ganhou " + xpFinal + " XP!");

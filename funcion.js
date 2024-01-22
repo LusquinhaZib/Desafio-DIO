@@ -1,24 +1,25 @@
-let resultado = winRatio(93, 22)
+let winRatioResult = winRatio(93, 22)
+let elo = getElo(winRatioResult)
+console.log("O herói tem um saldo de " + winRatioResult + " e está no Elo " + elo) 
 
 function winRatio(vitorias, derrotas){
     let average = vitorias - derrotas
     return average
 }
-
-//Classificador de Elo//
-
-if (resultado < 10) {
-    console.log("O herói tem um saldo de " + resultado + " e está no Elo Ferro!");
-} else if (resultado >= 11 && resultado <= 20){
-    console.log("O herói tem um saldo de " + resultado + " e está no Elo Bronze!");
-} else if (resultado >= 21 && resultado <= 50){
-    console.log("O herói tem um saldo de " + resultado + " e está no Elo Prata!");
-} else if (resultado >= 51 && resultado <= 80){
-    console.log("O herói tem um saldo de " + resultado + " e está no Elo Ouro!");
-} else if (resultado >= 81 && resultado <= 90){
-    console.log("O herói tem um saldo de " + resultado + " e está no Elo Diamante!");
-} else if (resultado >= 91 && resultado <= 100){
-    console.log("O herói tem um saldo de " + resultado + " e está no Elo Lendário!");
-} else {
-    console.log("O herói tem um saldo de " + resultado + " e está no Elo Imortal!")
+function getElo(winRatioResult){
+    let elo = "Imortal"
+    if (winRatioResult < 10) {
+        elo = "Ferro"
+    } else if (winRatioResult >= 11 && winRatioResult <= 20){
+        elo = "Bronze";
+    } else if (winRatioResult >= 21 && winRatioResult <= 50){
+        elo = "Prata";
+    } else if (winRatioResult >= 51 && winRatioResult <= 80){
+        elo = "Ouro";
+    } else if (winRatioResult >= 81 && winRatioResult <= 90){
+        elo = "Diamante"
+    } else if (winRatioResult >= 91 && winRatioResult <= 100){
+        elo = "Lendário"
+    }
+    return elo
 }
